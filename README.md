@@ -1,14 +1,10 @@
-geomagnetic
-===========
-
- from www.swpc.noaa.gov
-
-
 Geomagnetic
 ======================================
 Parser for getting Earth magnetic field parameters from
 Space Weather Prediction Center -
 [http://www.swpc.noaa.gov/](http://www.swpc.noaa.gov/).
+
+[![Build Status](https://travis-ci.org/vodolaz095/geomagnetic.png)](https://travis-ci.org/vodolaz095/geomagnetic)
 
 Description
 ======================================
@@ -82,7 +78,7 @@ Copyright
 ======================================
 The MIT License (MIT)
 
-Copyright (c) 2013 Anatolij Ostroumov <ostroumov095@gmail.com>
+Copyright (c) 2013 Anatolij Ostroumov ostroumov095 at gmail dot com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
