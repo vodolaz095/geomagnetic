@@ -1,0 +1,29 @@
+{
+  "name": "geomagnetic",
+  "version": "0.0.1",
+  "description": "Parser for getting Earth magnetic fields values from www.swpc.noaa.gov ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example/example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vodolaz095/geomagnetic.git"
+  },
+  "keywords": [
+    "geomagnetic",
+    "magnetic",
+    "field",
+    "parser",
+    "Earth"
+  ],
+  "author": "Anatolij Ostroumov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vodolaz095/geomagnetic/issues"
+  },
+  "devDependencies": {
+    "vows":"*"
+  }
+}
