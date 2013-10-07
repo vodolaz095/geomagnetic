@@ -60,9 +60,13 @@ will return something like:
 The data is an array of objects with 4 fields:
 
   `timestamp` - unix timestamp of current measures
+
   `Hp` - component perpendicular to the satellite orbital plane or parallel to the Earth's spin axis
+
   `He` -  component perpendicular to Hp and directed earthwards
+
   `Hn` - component perpendicular to both Hp and He, directed eastwards
+
   `total` - absolute value of magnetic field  - sqrt(Hp^2+He^2+Hn^2).
 
 All data have units in `nanoteslas` - nT.
