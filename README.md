@@ -5,6 +5,7 @@ Space Weather Prediction Center -
 [http://www.swpc.noaa.gov/](http://www.swpc.noaa.gov/).
 
 [![Build Status](https://travis-ci.org/vodolaz095/geomagnetic.png)](https://travis-ci.org/vodolaz095/geomagnetic)
+[![NPM version](https://badge.fury.io/js/geomagnetic.svg)](http://badge.fury.io/js/geomagnetic)
 
 Description
 ======================================
@@ -27,7 +28,7 @@ Usage
 
 will return something like:
 
-```json
+```javascript
 
      [
       { timestamp: 1399158180000,
