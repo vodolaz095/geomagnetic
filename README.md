@@ -17,8 +17,8 @@ Usage
 
 ```javascript
 
-    var magnetic = require('./index.js');
-    magnetic(function(err,data){
+    var geomagnetic = require('geomagnetic');
+    geomagnetic(function(err,data){
       if(err) throw err;
       console.log(data);
     });
@@ -27,39 +27,42 @@ Usage
 
 will return something like:
 
-```
+```json
 
-    [ { timestamp: 1380739740000,
-      Hp: 109,
-      He: 47.2,
-      Hn: -7.81,
-      total: 119,
-      units: 'nanotesla (nT)' },
-    { timestamp: 1380739800000,
-      Hp: 108,
-      He: 47.1,
-      Hn: -7.84,
-      total: 118,
-      units: 'nanotesla (nT)' },
-    { timestamp: 1380739860000,
-      Hp: 107,
-      He: 47.6,
-      Hn: -7.66,
-      total: 117,
-      units: 'nanotesla (nT)' },
-      .....
-    { timestamp: 1380739920000,
-      Hp: 106,
-      He: 48,
-      Hn: -7.51,
-      total: 117,
-      units: 'nanotesla (nT)' } ]
+     [
+      { timestamp: 1399158180000,
+        time: Sun May 04 2014 03:03:00 GMT+0400 (MSK),
+        Hp: 63.7,
+        He: 75.2,
+        Hn: -7.73,
+        total: 98.8,
+        units: 'nanotesla (nT)'
+      },
+      { timestamp: 1399158240000,
+        time: Sun May 04 2014 03:04:00 GMT+0400 (MSK),
+        Hp: 64.4,
+        He: 76.2,
+        Hn: -9.04,
+        total: 100,
+        units: 'nanotesla (nT)'
+      },
+      { timestamp: 1399158300000,
+        time: Sun May 04 2014 03:05:00 GMT+0400 (MSK),
+        Hp: 64.5,
+        He: 77.1,
+        Hn: -9.51,
+        total: 101,
+        units: 'nanotesla (nT)'
+      }
+     ]
 
 ```
 
 The data is an array of objects with 4 fields:
 
-  `timestamp` - unix timestamp of current measures
+  `timestamp` - unix timestamp of moment when current measures are taken
+
+  `time` - javascript object of Date of moment when current measures are taken
 
   `Hp` - component perpendicular to the satellite orbital plane or parallel to the Earth's spin axis
 
@@ -74,7 +77,7 @@ All data have units in `nanoteslas` - nT.
 Note 1: `total` is probably measured by omni directional solenoid system,
 not counted from He, Hp, Hn, so there is <5% discrepance.
 
-Note 2: sometimes there is -100000 values for magnetic fieldsmagnitutes.
+Note 2: sometimes there is -100000 values for magnetic fields magnitutes.
 This is probably the error in data transfer or a way to show that data was
 not properly acquired. So, the user of library can simply negate this values.
 
@@ -84,7 +87,7 @@ Copyright
 ======================================
 The MIT License (MIT)
 
-Copyright (c) 2013 Anatolij Ostroumov ostroumov095 at gmail dot com>
+Copyright (c) 2013 Anatolij Ostroumov ostroumov095 at gmail dot com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

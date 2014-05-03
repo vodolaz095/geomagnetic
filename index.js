@@ -23,9 +23,12 @@ function _parseString(oneString) {
     }
   });
 
-  dts = new Date(parsedData[0], (parsedData[1] - 1), parsedData[2], parsedData[3].substring(0, 2), parsedData[3].substring(2, 4));
+//because there is 4 hours between  W075 and Unix Timestamp time
+  dts = new Date(new Date(parsedData[0], (parsedData[1] - 1), parsedData[2], parsedData[3].substring(0, 2), parsedData[3].substring(2, 4)).getTime()  + 4 * 60 * 60 * 1000);
+
   return {
-    timestamp: (dts.getTime() + 4 * 60 * 60 * 1000), //because there is 4 hours between  W075 and Unix Timestamp time
+    timestamp: dts.getTime(),
+    time: dts,
     Hp: parseFloat(parsedData[6]),
     He: parseFloat(parsedData[7]),
     Hn: parseFloat(parsedData[8]),

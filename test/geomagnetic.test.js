@@ -20,6 +20,7 @@ vows.describe('geomagnetic')
           data.map(function(element){
 /*
 { timestamp: 1381183560000,
+    time: Sun May 04 2014 03:05:00 GMT+0400 (MSK),
     Hp: -100000,
     He: -100000,
     Hn: -100000,
@@ -30,6 +31,8 @@ vows.describe('geomagnetic')
             element.should.have.property('timestamp');
             element.timestamp.should.be.above((now-24*60*60*1000));
             element.timestamp.should.be.below((now+24*60*60*1000));
+            element.time.should.be.a.Date;
+
 
             element.should.have.property('Hp');
             if(element.Hp != -100000){
