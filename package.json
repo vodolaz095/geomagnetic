@@ -1,6 +1,6 @@
 {
   "name": "geomagnetic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parser for getting Earth magnetic fields values from www.swpc.noaa.gov ",
   "main": "index.js",
   "engines": {
@@ -32,6 +32,6 @@
   },
   "devDependencies": {
     "mocha": "~2.3.3",
-    "should": "~0.8.1"
+    "should": "~7.1.0"
   }
 }
