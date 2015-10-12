@@ -1,16 +1,18 @@
 {
   "name": "geomagnetic",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Parser for getting Earth magnetic fields values from www.swpc.noaa.gov ",
   "main": "index.js",
   "engines": {
-    "node": ">=0.10.26",
+    "node": ">=0.10.36",
     "npm": ">=1.4.3"
   },
-  "os" : [ "linux" ],
+  "os": [
+    "linux"
+  ],
   "scripts": {
     "start": "node example/example.js",
-    "test": "./node_modules/.bin/vows --spec"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,7 @@
     "url": "https://github.com/vodolaz095/geomagnetic/issues"
   },
   "devDependencies": {
-    "vows":"*",
-    "should":"*"
+    "mocha": "~2.3.3",
+    "should": "~0.8.1"
   }
 }

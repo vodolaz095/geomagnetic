@@ -1,5 +1,6 @@
-var http = require('http'),
-  dataUrl = 'http://www.swpc.noaa.gov/ftpdir/lists/geomag/Gp_mag_1m.txt';
+'use strict';
+var
+  http = require('http');
 
 function _getStrings(body) {
   var ret = [],
@@ -37,7 +38,8 @@ function _parseString(oneString) {
   };
 }
 
-module.exports = exports = function (callback) {
+
+function _fetch(dataUrl,callback) {
   http.get(dataUrl,function (res) {
     var body = '';
     if (res.statusCode === 200) {
@@ -55,9 +57,17 @@ module.exports = exports = function (callback) {
         }
       });
     } else {
-      callback(new Error('Bad server response with code' + res.statusCode));
+      callback(new Error('Bad server response with code ' + res.statusCode));
     }
   }).on('error', function (e) {
       callback(e);
     });
+}
+
+exports.getPrimary = function(callback){
+  return _fetch('http://services.swpc.noaa.gov/text/goes-magnetometer-primary.txt', callback);
+};
+
+exports.getSecondary = function(callback){
+  return _fetch('http://services.swpc.noaa.gov/text/goes-magnetometer-secondary.txt', callback);
 };

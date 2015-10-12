@@ -1,0 +1,19 @@
+# Editor specific
+.git/
+.idea/
+*.geany
+
+# MacOs specific
+.DS_Store
+
+# Distribution folders
+example/
+test/
+node_modules/
+
+# Distribution files
+.jshintrc
+.gitignore
+.npmignore
+.travis.yml
+

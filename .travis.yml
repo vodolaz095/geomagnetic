@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - 0.8
   - 0.10
+  - 0.12
   - 0.11
+  - iojs
+  - iojs-v1.0.4
+
+os:
+  - linux
+
+services:
+  - redis-server
+  - mongodb
 
 notifications:
   email: false

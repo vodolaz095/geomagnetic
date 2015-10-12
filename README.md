@@ -9,9 +9,14 @@ Space Weather Prediction Center -
 
 Description
 ======================================
-This is simple pure nodejs data scrapper, that grabs data from here -
-[http://www.swpc.noaa.gov/ftpdir/lists/geomag/Gp_mag_1m.txt](http://www.swpc.noaa.gov/ftpdir/lists/geomag/Gp_mag_1m.txt)
+This is simple pure nodejs data scrapper, that grabs data primary and secondary
+[Goes Magnetometers](http://www.swpc.noaa.gov/products/goes-magnetometer)
 and parses them as array.
+
+
+
+![Graph of electomagnetic field magnitude](http://services.swpc.noaa.gov/images/goes-magnetometer.gif?time=1444616162000)
+
 
 Usage
 ======================================
@@ -19,10 +24,15 @@ Usage
 ```javascript
 
     var geomagnetic = require('geomagnetic');
-    geomagnetic(function(err,data){
+    geomagnetic.getPrimary(function(err,data){
       if(err) throw err;
       console.log(data);
     });
+    geomagnetic.getSecondary(function(err,data){
+      if(err) throw err;
+      console.log(data);
+    });
+
 
 ```
 
