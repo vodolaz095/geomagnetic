@@ -9,9 +9,5 @@ node_js:
 os:
   - linux
 
-services:
-  - redis-server
-  - mongodb
-
 notifications:
   email: false
